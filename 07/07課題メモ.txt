@@ -1,0 +1,16 @@
+2017.02.2提出
+
+1.index.php
+・データ登録（→insert.phpへ）
+書籍名、amazon_URL、コメント
+
+2.insert.php
+・URLチェック（amazonかどうか）
+→amazon以外の場合、メッセージを表示
+→amazonの場合、URLを短縮
+・POSTされたデータをDBに登録
+・index.phpにリダイレクト
+
+3.select.php
+・データ一覧出力
+N0、書籍名、amazon_URL（リンク）、コメント、登録日時
