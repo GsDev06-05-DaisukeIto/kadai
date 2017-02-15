@@ -1,4 +1,6 @@
 <?php
+
+
 //1.  DB接続します
 try {
   $pdo = new PDO('mysql:dbname=gs_db;charset=utf8;host=localhost','root','');
@@ -39,10 +41,17 @@ if($status==false){
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>フリーアンケート表示</title>
-        <link rel="stylesheet" href="css/range.css">
+        <title>ブックマーク一覧</title>
+        <link rel="stylesheet" href="css/main.css">
         <link href="css/bootstrap.min.css" rel="stylesheet">
+
+
+
         <style>
+            body {
+                text-align: center;
+            }
+            
             div {
                 padding: 10px;
                 font-size: 16px;
@@ -56,33 +65,52 @@ if($status==false){
             <nav class="navbar navbar-default">
                 <div class="container-fluid">
                     <div class="navbar-header">
-                        <a class="navbar-brand" href="index.php">データ登録</a>
+                        <a class="navbar-brand" href="#"></a>
                     </div>
+<!--
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="select.php">ブックマーク一覧</a></li>
+                        <li><a href="index.php">ブックマーク登録</a></li>
+                    </ul>
+-->
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="login.php">LOGIN</a></li>
+                    </ul>
+
                 </div>
             </nav>
         </header>
         <!-- Head[End] -->
 
         <!-- Main[Start] -->
-        <div>
-            <div class="container jumbotron">
-                <table border=1>
-                    <tr>
-                        <th>No.</th>
-                        <th>書籍名</th>
-                        <th>書籍URL</th>
-                        <th>コメント</th>
-                        <th>登録日時</th>
-                    </tr>
 
-                    <?=$view?>
+        <?php
+//        echo $menu;
+        ?>
 
-                </table>
+            <div>
+                <div class="container jumbotron">
+                    <table border=1>
+                        <tr>
+                            <th>No.</th>
+                            <th>書籍名</th>
+                            <th>amazon_URL</th>
+                            <th>コメント</th>
+                            <th>登録日時</th>
+                        </tr>
 
+                        <?=$view?>
+
+                    </table>
+
+                </div>
             </div>
-        </div>
-        <!-- Main[End] -->
 
+            <!-- Main[End] -->
+
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+            <script src="js/bootstrap.min.js"></script>
     </body>
 
     </html>
