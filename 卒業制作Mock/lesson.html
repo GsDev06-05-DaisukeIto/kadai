@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title> LESSON画面</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+
+</head>
+
+<body>
+    <header>
+        <div class="clearfix">
+            <div id="header-left">
+                <ul class="nav navbar-nav">
+                    <li id="logo"><span>LOGO</span></li>
+                    <li><a href="index.php">LESSON一覧</a></li>
+                </ul>
+            </div>
+            <div id="header-right">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">user_name
+                              <span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="#">マイページ</a></li>
+                            <li><a href="#">設定</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">ログアウト</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <div class="main">
+        <div class="clearfix">
+            <div id="main-left">
+                <div id="title-panel">スケールを学ぼう
+                </div>
+                <div class="slide-panel first active">1.スライド
+                </div>
+                <div class="slide-panel second">2.スライド
+                </div>
+                <div class="slide-panel third">3.スライド
+                </div>
+                <div class="slide-panel fourth">4.スライド
+                </div>
+                <div class="slide-panel fifth">5.スライド
+                </div>
+                <div class="slide-panel sixth">6.スライド
+                </div>
+                <div class="slide-panel seventh">7.スライド
+                </div>
+                <div class="slide-panel start">8.スライド
+                </div>
+            </div>
+            <div id="main-center">
+                <div id="contents">
+                    <div id="contents-box">contents </div>
+                    <div id="inputKey-box">
+                        <div class="inputKey first">
+                        </div>
+                        <div class="inputKey second">
+                        </div>
+                        <div class="inputKey third">
+                        </div>
+                        <div class="inputKey fourth">
+                        </div>
+                        <div class="inputKey fifth">
+                        </div>
+                        <div class="inputKey sixth">
+                        </div>
+                        <div class="inputKey seventh">
+                        </div>
+                        <div class="inputKey eighth">
+                        </div>
+                        <div class="tool" id="anserChk">採点
+                        </div>
+                        <div class="tool" id="keyClear">クリア
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="main-right">
+                <div id="info-box">
+                    <div class="info title">Information</div>
+                    <div class="info contents"></div>
+                </div>
+                <div id="hint-box">
+                    <div class="hint title">Hint</div>
+                    <div class="hint" id="hint1">Hint1</div>
+                    <div class="hint" id="hint2">Hint2</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main2">
+        <div class="clearfix">
+            <div id="main2-left">
+                <div class="piano-setting title">Piano-Setting</div>
+                <div class="piano-setting keybordSelect">Keyboard Select
+                    <div class="dropdown piano">
+                        <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+                            PC Keybord
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a href="#" data-value="android">Other Keyboard</a></li>
+                            <li><a href="#" data-value="other">Other Keyboard</a></li>
+                        </ul>
+                        <input type="hidden" name="dropdown-value" value="">
+                    </div>
+                </div>
+                <div class="piano-setting tone">Tone
+                    <div class="dropdown piano">
+                        <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+                            Tone1
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a href="#" data-value="android">Tone2</a></li>
+                            <li><a href="#" data-value="other">Tone3</a></li>
+                        </ul>
+                        <input type="hidden" name="dropdown-value" value="">
+                    </div>
+                </div>
+                <div class="piano-setting width">Width
+                    <input type="range" id="slider" value="5" min="1" max="10">
+                </div>
+            </div>
+            <div id="main2-center">
+                <div id="piano-top">
+                    <div id="selectScale">Select Scale
+                        <br>
+                        <div class="selectBut sel_c" data-scale="C" data-scaleNo="0">C</div>
+                        <div class="selectBut sel_db" data-scale="Db" data-scaleNo="1">Db</div>
+                        <div class="selectBut sel_d" data-scale="D" data-scaleNo="2">D</div>
+                        <div class="selectBut sel_eb" data-scale="Eb" data-scaleNo="3">Eb</div>
+                        <div class="selectBut sel_e" data-scale="E" data-scaleNo="4">E</div>
+                        <div class="selectBut sel_f" data-scale="F" data-scaleNo="5">F</div>
+                        <div class="selectBut sel_gb" data-scale="Gb" data-scaleNo="6">Gb</div>
+                        <div class="selectBut sel_g" data-scale="G" data-scaleNo="7">G</div>
+                        <div class="selectBut sel_ab" data-scale="Ab" data-scaleNo="8">Ab</div>
+                        <div class="selectBut sel_a" data-scale="A" data-scaleNo="9">A</div>
+                        <div class="selectBut sel_bb" data-scale="Bb" data-scaleNo="10">Bb</div>
+                        <div class="selectBut sel_b" data-scale="B" data-scaleNo="11">B</div>
+                    </div>
+                </div>
+                <div id="piano-box">
+                    <div id="borad-container">
+                        <!--
+                    <div class="borad-octBox oct4">
+                        <div class="boardKey white C" id="C4" data-hz="261.6" data-note="C4">C4</div>
+                        <div class="boardKey white D" id="D4" data-hz="293.7" data-note="D4"></div>
+                        <div class="boardKey white E" id="E4" data-hz="329.6" data-note="E4"></div>
+                        <div class="boardKey white F" id="F4" data-hz="349.2" data-note="F4"></div>
+                        <div class="boardKey white G" id="B4" data-hz="392" data-note="G4"></div>
+                        <div class="boardKey white A" id="A4" data-hz="440" data-note="A4"></div>
+                        <div class="boardKey white B" id="B4" data-hz="493.9" data-note="B4"></div>
+                        <div class="boardKey black Db" id="Db4" data-hz="277.2" data-note="C#4" data-note="Db4"></div>
+                        <div class="boardKey black Eb" id="Eb4" data-hz="311.1" data-note="D#4" data-note="Eb4"></div>
+                        <div class="boardKey black Gb" id="Gb4" data-hz="370" data-note="F#4" data-note="Gb4"></div>
+                        <div class="boardKey black Ab" id="Ab4" data-hz="415.3" data-note="G#4" data-note="Ab4"></div>
+                        <div class="boardKey black Bb" id="Bb4" data-hz="466.2" data-note="A#4" data-note="Bb4"></div>
+                    </div>
+                    <div class="borad-octBox oct5">
+                        <div class="boardKey white C" id="C5" data-hz="523.3" data-note="C5">C5</div>
+                        <div class="boardKey white D" id="D5" data-hz="587.3" data-note="D5"></div>
+                        <div class="boardKey white E" id="E5" data-hz="659.3" data-note="E5"></div>
+                        <div class="boardKey white F" id="F5" data-hz="698.5" data-note="F5"></div>
+                        <div class="boardKey white G" id="G5" data-hz="784.0" data-note="G5"></div>
+                        <div class="boardKey white A" id="A5" data-hz="880.0" data-note="A5"></div>
+                        <div class="boardKey white B" id="B5" data-hz="987.8" data-note="B5"></div>
+                        <div class="boardKey black Db" id="Db5" data-hz="554.4" data-note="C#5" data-note="Db5"></div>
+                        <div class="boardKey black Eb" id="Eb5" data-hz="622.3" data-note="D#5" data-note="Eb5"></div>
+                        <div class="boardKey black Gb" id="Gb5" data-hz="740.0" data-note="F#5" data-note="Gb5"></div>
+                        <div class="boardKey black Ab" id="Ab5" data-hz="830.6" data-note="G#5" data-note="Ab5"></div>
+                        <div class="boardKey black Bb" id="Bb5" data-hz="932.3" data-note="A#5" data-note="Bb5"></div>
+                    </div>
+-->
+                        <div class="oct-container" id="oct4">
+                            <div class="key white c" id="c4" data-hz="261.6" data-note="c4">
+                                <div class="keyHint">C4</div>
+                            </div>
+                            <div class="key white d" id="d4" data-hz="293.7" data-note="d4"></div>
+                            <div class="key white e" id="e4" data-hz="329.6" data-note="e4">
+                                <div class="keyHint"></div>
+                            </div>
+                            <div class="key white f" id="f4" data-hz="349.2" data-note="f4"></div>
+                            <div class="key white g" id="g4" data-hz="392" data-note="g4"></div>
+                            <div class="key white a" id="a4" data-hz="440" data-note="a4"></div>
+                            <div class="key white b" id="b4" data-hz="493.9" data-note="b4"></div>
+                            <div class="key black db" id="db4" data-hz="277.2" data-note="db4"></div>
+                            <div class="key black eb" id="eb4" data-hz="311.1" data-note="eb4"></div>
+                            <div class="key black gb" id="gb4" data-hz="370" data-note="gb4"></div>
+                            <div class="key black ab" id="ab4" data-hz="415.3" data-note="ab4"></div>
+                            <div class="key black bb" id="bb4" data-hz="466.2" data-note="bb4"></div>
+                        </div>
+
+                        <div class="oct-container" id="oct5">
+                            <div class="key white c" id="c5" data-hz="523.3" data-note="c5">
+                                <div class="keyHint">C5</div>
+                            </div>
+                            <div class="key white d" id="d5" data-hz="587.3" data-note="d5"></div>
+                            <div class="key white e" id="e5" data-hz="659.3" data-note="e5"></div>
+                            <div class="key white f" id="f5" data-hz="698.5" data-note="f5"></div>
+                            <div class="key white g" id="g5" data-hz="784.0" data-note="g5"></div>
+                            <div class="key white a" id="a5" data-hz="880.0" data-note="a5"></div>
+                            <div class="key white b" id="b5" data-hz="987.8" data-note="b5"></div>
+                            <div class="key black db" id="db5" data-hz="554.4" data-note="db5"></div>
+                            <div class="key black eb" id="eb5" data-hz="622.3" data-note="eb5"></div>
+                            <div class="key black gb" id="gb5" data-hz="740.0" data-note="gb5"></div>
+                            <div class="key black ab" id="ab5" data-hz="830.6" data-note="ab5"></div>
+                            <div class="key black bb" id="bb5" data-hz="932.3" data-note="bb5"></div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--
+    <div class="main3">
+        <div class="clearfix">
+            <div id="main3-left">
+
+            </div>
+            <div id="main3-center">
+                <div id="pianoRoll-key">
+                    <div class="oct-box">
+                        <div class="whiteKey"></div>
+                        <div class="whiteKey"></div>
+                        <div class="whiteKey"></div>
+                        <div class="whiteKey"></div>
+                        <div class="whiteKey"></div>
+                        <div class="whiteKey"></div>
+                        <div class="whiteKey">C6</div>
+                        <div class="blackKey b1"></div>
+                        <div class="blackKey b2"></div>
+                        <div class="blackKey b3"></div>
+                        <div class="blackKey b4"></div>
+                        <div class="blackKey b5"></div>
+                    </div>
+                    <div class="oct-box">
+                        <div class="whiteKey"></div>
+                        <div class="whiteKey"></div>
+                        <div class="whiteKey"></div>
+                        <div class="whiteKey"></div>
+                        <div class="whiteKey"></div>
+                        <div class="whiteKey"></div>
+                        <div class="whiteKey">C5</div>
+                        <div class="blackKey b1"></div>
+                        <div class="blackKey b2"></div>
+                        <div class="blackKey b3"></div>
+                        <div class="blackKey b4"></div>
+                        <div class="blackKey b5"></div>
+                    </div>
+                    <div class="oct-box">
+                        <div class="whiteKey"></div>
+                        <div class="whiteKey"></div>
+                        <div class="whiteKey"></div>
+                        <div class="whiteKey"></div>
+                        <div class="whiteKey"></div>
+                        <div class="whiteKey"></div>
+                        <div class="whiteKey">C4</div>
+                        <div class="blackKey b1"></div>
+                        <div class="blackKey b2"></div>
+                        <div class="blackKey b3"></div>
+                        <div class="blackKey b4"></div>
+                        <div class="blackKey b5"></div>
+                    </div>
+                    <div class="oct-box">
+                        <div class="whiteKey"></div>
+                        <div class="whiteKey"></div>
+                        <div class="whiteKey"></div>
+                        <div class="whiteKey"></div>
+                        <div class="whiteKey"></div>
+                        <div class="whiteKey"></div>
+                        <div class="whiteKey">C3</div>
+                        <div class="blackKey b1"></div>
+                        <div class="blackKey b2"></div>
+                        <div class="blackKey b3"></div>
+                        <div class="blackKey b4"></div>
+                        <div class="blackKey b5"></div>
+                    </div>
+                    
+                </div>
+                <div id="pianoRoll-box">
+                    <canvas id="pianoRoll">aaa</canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+-->
+<!--
+    <div class="main4">
+        <div class="playBox">
+            <div class="playButton" id="back">◀︎◀︎</div>
+            <div class="playButton" id="push">▶︎▶︎</div>
+            <div class="playButton" id="stop">◾️</div>
+            <div class="playButton" id="start">▶︎</div>
+            <div class="playButton" id="rec">●</div>
+            <div class="setBox">
+                <div class="set" id="time"></div>
+                <div class="set" id="tempo"></div>
+                <div class="set" id="metroNome"></div>
+            </div>
+        </div>
+    </div>
+-->
+
+
+
+
+
+
+
+    <!--ヒントモーダル-->
+
+    <!--1つ目-->
+    <div class="hint-modal-wrapper" id="hint1-modal">
+        <div class="hint-modal">
+            <div class="close-modal">
+                <i class="fa fa-2x fa-times"></i>
+            </div>
+            <div class="hint-modal-contents" id="hint1-modal-contents">
+                <h2>ヒント1</h2>
+                <p style="font-size:30px;">正解の音を聞いてみましょう</p>
+                <input type="button" id="hint1-on" value="ON" style="font-size:20px; width:200px; height:30px">
+            </div>
+        </div>
+    </div>
+
+    <!--2つ目-->
+    <div class="hint-modal-wrapper" id="hint2-modal">
+        <div class="hint-modal">
+            <div class="close-modal">
+                <i class="fa fa-2x fa-times"></i>
+            </div>
+            <div class="hint-modal-contents" id="hint2-modal-contents">
+                <h2>ヒント2</h2>
+                <p style="font-size:30px;">答えの鍵盤を表示します</p>
+                <input type="button" id="hint2-on" value="ON" style="font-size:20px; width:200px; height:30px">
+            </div>
+        </div>
+    </div>
+
+    <!--3つ目-->
+    <div class="hint-modal-wrapper" id="hint3-modal">
+        <div class="hint-modal">
+            <div class="close-modal">
+                <i class="fa fa-2x fa-times"></i>
+            </div>
+            <div class="hint-modal-contents" id="hint3-modal-contents">
+                <h2>ヒント3</h2>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!--レッスンボタン-->
+    <!--
+<div id="lesson-box">
+<div class=".lesson-button" id="lesson">LESSON</div>
+</div>
+-->
+
+    <!--レッスンモーダル-->
+
+    <!--div版-->
+    <div class="lesson-modal-wrapper">
+        <div class="lesson-modal">
+            <div class="close-modal">
+                <i class="fa fa-2x fa-times"></i>
+            </div>
+            <div class="change-button next">
+                <p class="">進む</p>
+            </div>
+            <div class="change-button prev">
+                <p class="">もどる</p>
+            </div>
+
+            <!--        <div id="lesson-contents-wrapper">-->
+            <div class="lesson-contents" id="slide1">
+                <p>slide1</p>
+                <h1>スケールとは</h1>
+                <br>
+                <br>
+                <br>
+                <p>１オクターブ（12種類）の中から特定のパターンで</p>
+                <p>グループ化した音の集まりです。</p>
+                <p>（例）</p>
+                <p>メジャースケール</p>
+                <p>マイナースケール</p>
+
+            </div>
+            <div class="lesson-contents" id="slide2">
+                <p>slide2</p>
+
+            </div>
+            <div class="lesson-contents" id="slide4">
+                <p>slide3</p>
+                <h1>スケールとは</h1>
+
+            </div>
+            <div class="lesson-contents" id="slide3">
+                <p>slide4</p>
+                <h1>スケールとは</h1>
+
+            </div>
+            <div class="lesson-contents" id="slide5">
+                <p>slide5</p>
+                <h1>スケールとは</h1>
+
+-->
+            </div>
+            <div class="lesson-contents" id="slide6">
+                <h2>slide6</h2>
+            </div>
+            <div class="lesson-contents" id="slide7">
+                <h2>slide7</h2>
+            </div>
+            <div class="lesson-contents" id="slide8">
+                <h2>slide8</h2>
+            </div>
+            <ul class="pager">
+                <li class="previous"><a href="">前へ</a></li>
+                <li class="next"><a href="">次へ</a></li>
+            </ul>
+        </div>
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script type="text/javascript" src="js/scale.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>

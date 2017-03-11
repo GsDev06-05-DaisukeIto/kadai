@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title> LESSON画面</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/themes/ui-lightness/jquery-ui.css">
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" />
+    <link rel="stylesheet" href="./css/style.css">
+    
+    <script type="text/javascript" src="./js/Tone.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="js/scale.js"></script>
+
+
+
+</head>
+
+<body>
+    <header>
+        <div class="clearfix">
+            <div id="header-left">
+                <ul class="nav navbar-nav">
+                    <li id="logo"><span>LOGO</span></li>
+                    <li><a href="index.php">MENU</a></li>
+                </ul>
+            </div>
+            <div id="header-right">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">user_name
+                            <span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="#">マイページ</a></li>
+                            <li><a href="#">設定</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">ログアウト</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <div class="daw-main">
+        <div class="daw-left">
+            <div class="add-box">
+                <div class="addButton" id="addTrackButton">addTrack</div>
+                <div class="addButton" id="onPianoKeybord">Keyboard</div>
+                <div class="addButton" id="onPianoRoll">Pianoroll</div>
+            </div>
+            <div class="track-set-box">
+                <div id="sortable-div">
+                    <div class="ui-state-defaults" id="t1">
+                        <div class="track-set-top">
+                            <div class="track-set-name">
+                                <div class="track-set-nameSpase">Track 1</div>
+                            </div>
+                            <div class="track-set-other"><i class="fa fa-cog"></i></div>
+                        </div>
+                        <div class="track-set-main">
+                            <div class="track-set-type"><img src="./img/Piano_icon.jpg"></div>
+                            <div class="track-set-button">
+                                <div class="track-set-buttons" id="muteTrack">M</div>
+                                <div class="track-set-buttons" id="soloTrack">S</div>
+                                <div class="track-set-buttons" id="recTrack">R</div>
+                            </div>
+                            <div class="track-set-volume">
+                                <div class="slider"></div>
+                            </div>
+                            <div class="track-set-pan">
+                                <img src="./img/Pan_icon.jpg">
+                            </div>
+                            <ul class="track-set-option-box t1">
+                                <li class="track-set-option delete">Delete</li>
+                                <li class="track-set-option rename">Rename</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="ui-state-defaults" id="t2">
+                        <div class="track-set-top">
+                            <div class="track-set-name">
+                                <div class="track-set-nameSpase">Track 2</div>
+                            </div>
+                            <div class="track-set-other"><i class="fa fa-cog"></i></div>
+                        </div>
+                        <div class="track-set-main">
+                            <div class="track-set-type"><img src="./img/Piano_icon.jpg"></div>
+                            <div class="track-set-button">
+                                <div class="track-set-buttons" id="muteTrack">M</div>
+                                <div class="track-set-buttons" id="soloTrack">S</div>
+                                <div class="track-set-buttons" id="recTrack">R</div>
+                            </div>
+                            <div class="track-set-volume">
+                                <div class="slider"></div>
+                            </div>
+                            <div class="track-set-pan">
+                                <img src="./img/Pan_icon.jpg">
+                            </div>
+                            <ul class="track-set-option-box t2">
+                                <li class="track-set-option delete">Delete</li>
+                                <li class="track-set-option rename">Rename</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="daw-center">
+            <div class="track-main-box">
+                <div class="track-main-container">
+                    <div class="track-main-top">
+                        <div class="track-bar-box">
+                            <div class="bars">1</div>
+                            <div class="bars">2</div>
+                            <div class="bars">3</div>
+                            <div class="bars">4</div>
+                            <div class="bars">5</div>
+                            <div class="bars">6</div>
+                            <div class="bars">7</div>
+                            <div class="bars">8</div>
+                            <div class="bars">9</div>
+                            <div class="bars">10</div>
+                            <div class="bars">11</div>
+                            <div class="bars">12</div>
+                            <div class="bars">13</div>
+                            <div class="bars">14</div>
+                            <div class="bars">15</div>
+                            <div class="bars">16</div>
+                        </div>
+                        <div class="track-locater-box">Locater-Space</div>
+                    </div>
+                    <div class="track-main">
+                        <div id="track-div">
+                            <div class="track t1">Track 1</div>
+                            <div class="track t2">Track 2</div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        
+        
+
+        <!--
+        <div class="addTrackPanel">
+            <div class="addTrackPanel-row-img">
+                <div class="addTrackPanel-img-box"></div>
+                <div class="addTrackPanel-img-box"></div>
+                <div class="addTrackPanel-img-box"></div>
+                <div class="addTrackPanel-img-box"></div>
+            </div>
+            <div class="addTrackPanel-row-txt">
+                <div class="addTrackPanel-txt-box"></div>
+                <div class="addTrackPanel-txt-box"></div>
+                <div class="addTrackPanel-txt-box"></div>
+                <div class="addTrackPanel-txt-box"></div>
+            </div>
+            <div class="addTrackPanel-row-img">
+                <div class="addTrackPanel-img-box"></div>
+                <div class="addTrackPanel-img-box"></div>
+                <div class="addTrackPanel-img-box"></div>
+                <div class="addTrackPanel-img-box"></div>
+            </div>
+            <div class="addTrackPanel-row-txt">
+                <div class="addTrackPanel-txt-box"></div>
+                <div class="addTrackPanel-txt-box"></div>
+                <div class="addTrackPanel-txt-box"></div>
+                <div class="addTrackPanel-txt-box"></div>
+            </div>
+            <div class="addTrackPanel-set-spase"></div>
+            <div class="addTrackPanel-set-box">
+                <span>TrackName：</span>
+                <input type="text" name="trackName" size="25" class="addTrackPanel-set-trackName">
+                <div class="addTrackPanel-set-button">add</div>
+            </div>
+        </div>
+-->
+
+
+        <div class="main3">
+            <div class="clearfix">
+                <div class="main3-top"></div>
+                <div class="main3-bottom">
+                    <div class="main3-left">
+                        <div class="pianoRoll-tool-box">
+                            <div class="pianoRoll-tool active"><i class="fa fa-2x fa-mouse-pointer "></i></div>
+                            <div class="pianoRoll-tool"><i class="fa fa-2x fa-pencil"></i></div>
+                            <div class="pianoRoll-tool"><i class="fa fa-2x fa-eraser"></i></div>
+                        </div>
+                    </div>
+                    <div id="main3-center">
+                        <div id="pianoRoll-key">
+                            <div class="roll-octBox oct9">
+                                <div class="rollKey white B" id="B9" data-hz="" data-note="B9"></div>
+                                <div class="rollKey white A" id="A9" data-hz="" data-note="A9"></div>
+                                <div class="rollKey white G" id="G9" data-hz="" data-note="G9"></div>
+                                <div class="rollKey white F" id="F9" data-hz="" data-note="F9"></div>
+                                <div class="rollKey white E" id="E9" data-hz="" data-note="E9"></div>
+                                <div class="rollKey white D" id="D9" data-hz="" data-note="D9"></div>
+                                <div class="rollKey white C" id="C9" data-hz="" data-note="C9">C9</div>
+                                <div class="rollKey black Bb" id="Bb9" data-hz="" data-note="A#9" data-note="Bb9"></div>
+                                <div class="rollKey black Ab" id="Ab9" data-hz="" data-note="G#9" data-note="Ab9"></div>
+                                <div class="rollKey black Gb" id="Gb9" data-hz="" data-note="F#9" data-note="Gb9"></div>
+                                <div class="rollKey black Eb" id="Eb9" data-hz="" data-note="D#9" data-note="Eb9"></div>
+                                <div class="rollKey black Db" id="Db9" data-hz="" data-note="C#9" data-note="Db9"></div>
+                            </div>
+                            <div class="roll-octBox oct8">
+                                <div class="rollKey white B" id="B8" data-hz="" data-note="B8"></div>
+                                <div class="rollKey white A" id="A8" data-hz="" data-note="A8"></div>
+                                <div class="rollKey white G" id="G8" data-hz="" data-note="G8"></div>
+                                <div class="rollKey white F" id="F8" data-hz="" data-note="F8"></div>
+                                <div class="rollKey white E" id="E8" data-hz="" data-note="E8"></div>
+                                <div class="rollKey white D" id="D8" data-hz="" data-note="D8"></div>
+                                <div class="rollKey white C" id="C8" data-hz="" data-note="C8">C8</div>
+                                <div class="rollKey black Bb" id="Bb8" data-hz="" data-note="A#8" data-note="Bb8"></div>
+                                <div class="rollKey black Ab" id="Ab8" data-hz="" data-note="G#8" data-note="Ab8"></div>
+                                <div class="rollKey black Gb" id="Gb8" data-hz="" data-note="F#8" data-note="Gb8"></div>
+                                <div class="rollKey black Eb" id="Eb8" data-hz="" data-note="D#8" data-note="Eb8"></div>
+                                <div class="rollKey black Db" id="Db8" data-hz="" data-note="C#8" data-note="Db8"></div>
+                            </div>
+                            <div class="roll-octBox oct7">
+                                <div class="rollKey white B" id="B7" data-hz="" data-note="B7"></div>
+                                <div class="rollKey white A" id="A7" data-hz="" data-note="A7"></div>
+                                <div class="rollKey white G" id="G7" data-hz="" data-note="G7"></div>
+                                <div class="rollKey white F" id="F7" data-hz="" data-note="F7"></div>
+                                <div class="rollKey white E" id="E7" data-hz="" data-note="E7"></div>
+                                <div class="rollKey white D" id="D7" data-hz="" data-note="D7"></div>
+                                <div class="rollKey white C" id="C7" data-hz="" data-note="C7">C7</div>
+                                <div class="rollKey black Bb" id="Bb7" data-hz="" data-note="A#7" data-note="Bb7"></div>
+                                <div class="rollKey black Ab" id="Ab7" data-hz="" data-note="G#7" data-note="Ab7"></div>
+                                <div class="rollKey black Gb" id="Gb7" data-hz="" data-note="F#7" data-note="Gb7"></div>
+                                <div class="rollKey black Eb" id="Eb7" data-hz="" data-note="D#7" data-note="Eb7"></div>
+                                <div class="rollKey black Db" id="Db7" data-hz="" data-note="C#7" data-note="Db7"></div>
+                            </div>
+                            <div class="roll-octBox oct6">
+                                <div class="rollKey white B" id="B6" data-hz="" data-note="B6"></div>
+                                <div class="rollKey white A" id="A6" data-hz="" data-note="A6"></div>
+                                <div class="rollKey white G" id="G6" data-hz="" data-note="G6"></div>
+                                <div class="rollKey white F" id="F6" data-hz="" data-note="F6"></div>
+                                <div class="rollKey white E" id="E6" data-hz="" data-note="E6"></div>
+                                <div class="rollKey white D" id="D6" data-hz="" data-note="D6"></div>
+                                <div class="rollKey white C" id="C6" data-hz="" data-note="C6">C6</div>
+                                <div class="rollKey black Bb" id="Bb6" data-hz="" data-note="A#6" data-note="Bb6"></div>
+                                <div class="rollKey black Ab" id="Ab6" data-hz="" data-note="G#6" data-note="Ab6"></div>
+                                <div class="rollKey black Gb" id="Gb6" data-hz="" data-note="F#6" data-note="Gb6"></div>
+                                <div class="rollKey black Eb" id="Eb6" data-hz="" data-note="D#6" data-note="Eb6"></div>
+                                <div class="rollKey black Db" id="Db6" data-hz="" data-note="C#6" data-note="Db6"></div>
+                            </div>
+                            <div class="roll-octBox oct5">
+                                <div class="rollKey white B" id="B5" data-hz="" data-note="B5"></div>
+                                <div class="rollKey white A" id="A5" data-hz="" data-note="A5"></div>
+                                <div class="rollKey white G" id="G5" data-hz="" data-note="G5"></div>
+                                <div class="rollKey white F" id="F5" data-hz="" data-note="F5"></div>
+                                <div class="rollKey white E" id="E5" data-hz="" data-note="E5"></div>
+                                <div class="rollKey white D" id="D5" data-hz="" data-note="D5"></div>
+                                <div class="rollKey white C" id="C5" data-hz="" data-note="C5">C5</div>
+                                <div class="rollKey black Bb" id="Bb5" data-hz="" data-note="A#5" data-note="Bb5"></div>
+                                <div class="rollKey black Ab" id="Ab5" data-hz="" data-note="G#5" data-note="Ab5"></div>
+                                <div class="rollKey black Gb" id="Gb5" data-hz="" data-note="F#5" data-note="Gb5"></div>
+                                <div class="rollKey black Eb" id="Eb5" data-hz="" data-note="D#5" data-note="Eb5"></div>
+                                <div class="rollKey black Db" id="Db5" data-hz="" data-note="C#5" data-note="Db5"></div>
+                            </div>
+                            <div class="roll-octBox oct4">
+                                <div class="rollKey white B" id="B4" data-hz="" data-note="B4"></div>
+                                <div class="rollKey white A" id="A4" data-hz="" data-note="A4"></div>
+                                <div class="rollKey white G" id="G4" data-hz="" data-note="G4"></div>
+                                <div class="rollKey white F" id="F4" data-hz="" data-note="F4"></div>
+                                <div class="rollKey white E" id="E4" data-hz="" data-note="E4"></div>
+                                <div class="rollKey white D" id="D4" data-hz="" data-note="D4"></div>
+                                <div class="rollKey white C" id="C4" data-hz="" data-note="C4">C4</div>
+                                <div class="rollKey black Bb" id="Bb4" data-hz="" data-note="A#4" data-note="Bb4"></div>
+                                <div class="rollKey black Ab" id="Ab4" data-hz="" data-note="G#4" data-note="Ab4"></div>
+                                <div class="rollKey black Gb" id="Gb4" data-hz="" data-note="F#4" data-note="Gb4"></div>
+                                <div class="rollKey black Eb" id="Eb4" data-hz="" data-note="D#4" data-note="Eb4"></div>
+                                <div class="rollKey black Db" id="Db4" data-hz="" data-note="C#4" data-note="Db4"></div>
+                            </div>
+                            <div class="roll-octBox oct3">
+                                <div class="rollKey white B" id="B3" data-hz="" data-note="B3"></div>
+                                <div class="rollKey white A" id="A3" data-hz="" data-note="A3"></div>
+                                <div class="rollKey white G" id="G3" data-hz="" data-note="G3"></div>
+                                <div class="rollKey white F" id="F3" data-hz="" data-note="F3"></div>
+                                <div class="rollKey white E" id="E3" data-hz="" data-note="E3"></div>
+                                <div class="rollKey white D" id="D3" data-hz="" data-note="D3"></div>
+                                <div class="rollKey white C" id="C3" data-hz="" data-note="C3">C3</div>
+                                <div class="rollKey black Bb" id="Bb3" data-hz="" data-note="A#3" data-note="Bb3"></div>
+                                <div class="rollKey black Ab" id="Ab3" data-hz="" data-note="G#3" data-note="Ab3"></div>
+                                <div class="rollKey black Gb" id="Gb3" data-hz="" data-note="F#3" data-note="Gb3"></div>
+                                <div class="rollKey black Eb" id="Eb3" data-hz="" data-note="D#3" data-note="Eb3"></div>
+                                <div class="rollKey black Db" id="Db3" data-hz="" data-note="C#3" data-note="Db3"></div>
+                            </div>
+                            <div class="roll-octBox oct2">
+                                <div class="rollKey white B" id="B2" data-hz="" data-note="B2"></div>
+                                <div class="rollKey white A" id="A2" data-hz="" data-note="A2"></div>
+                                <div class="rollKey white G" id="G2" data-hz="" data-note="G2"></div>
+                                <div class="rollKey white F" id="F2" data-hz="" data-note="F2"></div>
+                                <div class="rollKey white E" id="E2" data-hz="" data-note="E2"></div>
+                                <div class="rollKey white D" id="D2" data-hz="" data-note="D2"></div>
+                                <div class="rollKey white C" id="C2" data-hz="" data-note="C2">C2</div>
+                                <div class="rollKey black Bb" id="Bb2" data-hz="" data-note="A#2" data-note="Bb2"></div>
+                                <div class="rollKey black Ab" id="Ab2" data-hz="" data-note="G#2" data-note="Ab2"></div>
+                                <div class="rollKey black Gb" id="Gb2" data-hz="" data-note="F#2" data-note="Gb2"></div>
+                                <div class="rollKey black Eb" id="Eb2" data-hz="" data-note="D#2" data-note="Eb2"></div>
+                                <div class="rollKey black Db" id="Db2" data-hz="" data-note="C#2" data-note="Db2"></div>
+                            </div>
+                            <div class="roll-octBox oct1">
+                                <div class="rollKey white B" id="B1" data-hz="" data-note="B1"></div>
+                                <div class="rollKey white A" id="A1" data-hz="" data-note="A1"></div>
+                                <div class="rollKey white G" id="G1" data-hz="" data-note="G1"></div>
+                                <div class="rollKey white F" id="F1" data-hz="" data-note="F1"></div>
+                                <div class="rollKey white E" id="E1" data-hz="" data-note="E1"></div>
+                                <div class="rollKey white D" id="D1" data-hz="" data-note="D1"></div>
+                                <div class="rollKey white C" id="C1" data-hz="" data-note="C1">C1</div>
+                                <div class="rollKey black Bb" id="Bb1" data-hz="" data-note="A#1" data-note="Bb1"></div>
+                                <div class="rollKey black Ab" id="Ab1" data-hz="" data-note="G#1" data-note="Ab1"></div>
+                                <div class="rollKey black Gb" id="Gb1" data-hz="" data-note="F#1" data-note="Gb1"></div>
+                                <div class="rollKey black Eb" id="Eb1" data-hz="" data-note="D#1" data-note="Eb1"></div>
+                                <div class="rollKey black Db" id="Db1" data-hz="" data-note="C#1" data-note="Db1"></div>
+                            </div>
+                            <div class="roll-octBox oct0">
+                                <div class="rollKey white B" id="B0" data-hz="" data-note="B0"></div>
+                                <div class="rollKey white A" id="A0" data-hz="" data-note="A0"></div>
+                                <div class="rollKey white G" id="G0" data-hz="" data-note="G0"></div>
+                                <div class="rollKey white F" id="F0" data-hz="" data-note="F0"></div>
+                                <div class="rollKey white E" id="E0" data-hz="" data-note="E0"></div>
+                                <div class="rollKey white D" id="D0" data-hz="" data-note="D0"></div>
+                                <div class="rollKey white C" id="C0" data-hz="" data-note="C0">C0</div>
+                                <div class="rollKey black Bb" id="Bb0" data-hz="" data-note="A#0" data-note="Bb0"></div>
+                                <div class="rollKey black Ab" id="Ab0" data-hz="" data-note="G#0" data-note="Ab0"></div>
+                                <div class="rollKey black Gb" id="Gb0" data-hz="" data-note="F#0" data-note="Gb0"></div>
+                                <div class="rollKey black Eb" id="Eb0" data-hz="" data-note="D#0" data-note="Eb0"></div>
+                                <div class="rollKey black Db" id="Db0" data-hz="" data-note="C#0" data-note="Db0"></div>
+                            </div>
+                            <div class="roll-octBox oct-1">
+                                <div class="rollKey white B" id="B-1" data-hz="" data-note="B-1"></div>
+                                <div class="rollKey white A" id="A-1" data-hz="" data-note="A-1"></div>
+                                <div class="rollKey white G" id="G-1" data-hz="" data-note="G-1"></div>
+                                <div class="rollKey white F" id="F-1" data-hz="" data-note="F-1"></div>
+                                <div class="rollKey white E" id="E-1" data-hz="" data-note="E-1"></div>
+                                <div class="rollKey white D" id="D-1" data-hz="" data-note="D-1"></div>
+                                <div class="rollKey white C" id="C-1" data-hz="" data-note="C-1">C-1</div>
+                                <div class="rollKey black Bb" id="Bb-1" data-hz="" data-note="A#-1" data-note="Bb-1"></div>
+                                <div class="rollKey black Ab" id="Ab-1" data-hz="" data-note="G#-1" data-note="Ab-1"></div>
+                                <div class="rollKey black Gb" id="Gb-1" data-hz="" data-note="F#-1" data-note="Gb-1"></div>
+                                <div class="rollKey black Eb" id="Eb-1" data-hz="" data-note="D#-1" data-note="Eb-1"></div>
+                                <div class="rollKey black Db" id="Db-1" data-hz="" data-note="C#-1" data-note="Db-1"></div>
+                            </div>
+
+                        </div>
+                        <div id="pianoRoll-box">
+                            <div id="pianoRoll">
+                                <div class="pianoRoll-bar">1</div>
+                                <div class="pianoRoll-bar">2</div>
+                                <div class="pianoRoll-bar">3</div>
+                                <div class="pianoRoll-bar">4</div>
+                                <div class="pianoRoll-bar">5</div>
+                                <div class="pianoRoll-bar">6</div>
+                                <div class="pianoRoll-bar">7</div>
+                                <div class="pianoRoll-bar">8</div>
+                                <div class="pianoRoll-bar">9</div>
+                                <div class="pianoRoll-bar">10</div>
+                                <div class="pianoRoll-bar">11</div>
+                                <div class="pianoRoll-bar">12</div>
+                                <div class="pianoRoll-bar">13</div>
+                                <div class="pianoRoll-bar">14</div>
+                                <div class="pianoRoll-bar">15</div>
+                                <div class="pianoRoll-bar">16</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="keyboard">
+            <div class="clearfix">
+                <div class="keyboard-top"></div>
+                <div class="keyboard-bottom">
+                    <div class="keyboard-left">
+                        <div class="keyboard-tool-box">
+                            <div class="keyboard-tool shorten"><i class="fa fa-2x fa-2x fa-minus-circle"></i></div>
+                            <div class="keyboard-tool extend"><i class="fa fa-2x fa-plus-circle"></i></div>
+                            <div class="keyboard-tool size">6</div>
+                        </div>
+                    </div>
+                    <div id="keyboard-center">
+                        <div class="keyboard-box">
+                            <div id="keyboard-container">
+                            
+                                <div class="borad-octBox oct-1">
+                                    <div class="boardKey white C" id="C-1" data-hz="" data-note="C-1">C-1</div>
+                                    <div class="boardKey white D" id="D-1" data-hz="" data-note="D-1"></div>
+                                    <div class="boardKey white E" id="E-1" data-hz="" data-note="E-1"></div>
+                                    <div class="boardKey white F" id="F-1" data-hz="" data-note="F-1"></div>
+                                    <div class="boardKey white G" id="G-1" data-hz="" data-note="G-1"></div>
+                                    <div class="boardKey white A" id="A-1" data-hz="" data-note="A-1"></div>
+                                    <div class="boardKey white B" id="B-1" data-hz="" data-note="B-1"></div>
+                                    <div class="boardKey black Db" id="Db-1" data-hz="" data-note="C#-1" data-note="Db-1"></div>
+                                    <div class="boardKey black Eb" id="Eb-1" data-hz="" data-note="D#-1" data-note="Eb-1"></div>
+                                    <div class="boardKey black Gb" id="Gb-1" data-hz="" data-note="F#-1" data-note="Gb-1"></div>
+                                    <div class="boardKey black Ab" id="Ab-1" data-hz="" data-note="G#-1" data-note="Ab-1"></div>
+                                    <div class="boardKey black Bb" id="Bb-1" data-hz="" data-note="A#-1" data-note="Bb-1"></div>
+                                </div>
+                                <div class="borad-octBox oct0">
+                                    <div class="boardKey white C" id="C0" data-hz="" data-note="C0">C0</div>
+                                    <div class="boardKey white D" id="D0" data-hz="" data-note="D0"></div>
+                                    <div class="boardKey white E" id="E0" data-hz="" data-note="E0"></div>
+                                    <div class="boardKey white F" id="F0" data-hz="" data-note="F0"></div>
+                                    <div class="boardKey white G" id="G0" data-hz="" data-note="G0"></div>
+                                    <div class="boardKey white A" id="A0" data-hz="" data-note="A0"></div>
+                                    <div class="boardKey white B" id="B0" data-hz="" data-note="B0"></div>
+                                    <div class="boardKey black Db" id="Db0" data-hz="" data-note="C#0" data-note="Db0"></div>
+                                    <div class="boardKey black Eb" id="Eb0" data-hz="" data-note="D#0" data-note="Eb0"></div>
+                                    <div class="boardKey black Gb" id="Gb0" data-hz="" data-note="F#0" data-note="Gb0"></div>
+                                    <div class="boardKey black Ab" id="Ab0" data-hz="" data-note="G#0" data-note="Ab0"></div>
+                                    <div class="boardKey black Bb" id="Bb0" data-hz="" data-note="A#0" data-note="Bb0"></div>
+                                </div>
+                                <div class="borad-octBox oct1">
+                                    <div class="boardKey white C" id="C1" data-hz="" data-note="C1">C1</div>
+                                    <div class="boardKey white D" id="D1" data-hz="" data-note="D1"></div>
+                                    <div class="boardKey white E" id="E1" data-hz="" data-note="E1"></div>
+                                    <div class="boardKey white F" id="F1" data-hz="" data-note="F1"></div>
+                                    <div class="boardKey white G" id="G1" data-hz="" data-note="G1"></div>
+                                    <div class="boardKey white A" id="A1" data-hz="" data-note="A1"></div>
+                                    <div class="boardKey white B" id="B1" data-hz="" data-note="B1"></div>
+                                    <div class="boardKey black Db" id="Db1" data-hz="" data-note="C#1" data-note="Db1"></div>
+                                    <div class="boardKey black Eb" id="Eb1" data-hz="" data-note="D#1" data-note="Eb1"></div>
+                                    <div class="boardKey black Gb" id="Gb1" data-hz="" data-note="F#1" data-note="Gb1"></div>
+                                    <div class="boardKey black Ab" id="Ab1" data-hz="" data-note="G#1" data-note="Ab1"></div>
+                                    <div class="boardKey black Bb" id="Bb1" data-hz="" data-note="A#1" data-note="Bb1"></div>
+                                </div>
+                                <div class="borad-octBox oct2">
+                                    <div class="boardKey white C" id="C2" data-hz="" data-note="C2">C2</div>
+                                    <div class="boardKey white D" id="D2" data-hz="" data-note="D2"></div>
+                                    <div class="boardKey white E" id="E2" data-hz="" data-note="E2"></div>
+                                    <div class="boardKey white F" id="F2" data-hz="" data-note="F2"></div>
+                                    <div class="boardKey white G" id="G2" data-hz="" data-note="G2"></div>
+                                    <div class="boardKey white A" id="A2" data-hz="" data-note="A2"></div>
+                                    <div class="boardKey white B" id="B2" data-hz="" data-note="B2"></div>
+                                    <div class="boardKey black Db" id="Db2" data-hz="" data-note="C#2" data-note="Db2"></div>
+                                    <div class="boardKey black Eb" id="Eb2" data-hz="" data-note="D#2" data-note="Eb2"></div>
+                                    <div class="boardKey black Gb" id="Gb2" data-hz="" data-note="F#2" data-note="Gb2"></div>
+                                    <div class="boardKey black Ab" id="Ab2" data-hz="" data-note="G#2" data-note="Ab2"></div>
+                                    <div class="boardKey black Bb" id="Bb2" data-hz="" data-note="A#2" data-note="Bb2"></div>
+                                </div>
+                                <div class="borad-octBox oct3">
+                                    <div class="boardKey white C" id="C3" data-hz="" data-note="C3">C3</div>
+                                    <div class="boardKey white D" id="D3" data-hz="" data-note="D3"></div>
+                                    <div class="boardKey white E" id="E3" data-hz="" data-note="E3"></div>
+                                    <div class="boardKey white F" id="F3" data-hz="" data-note="F3"></div>
+                                    <div class="boardKey white G" id="G3" data-hz="" data-note="G3"></div>
+                                    <div class="boardKey white A" id="A3" data-hz="" data-note="A3"></div>
+                                    <div class="boardKey white B" id="B3" data-hz="" data-note="B3"></div>
+                                    <div class="boardKey black Db" id="Db3" data-hz="" data-note="C#3" data-note="Db3"></div>
+                                    <div class="boardKey black Eb" id="Eb3" data-hz="" data-note="D#3" data-note="Eb3"></div>
+                                    <div class="boardKey black Gb" id="Gb3" data-hz="" data-note="F#3" data-note="Gb3"></div>
+                                    <div class="boardKey black Ab" id="Ab3" data-hz="" data-note="G#3" data-note="Ab3"></div>
+                                    <div class="boardKey black Bb" id="Bb3" data-hz="" data-note="A#3" data-note="Bb3"></div>
+                                </div>
+                                <div class="borad-octBox oct4">
+                                    <div class="boardKey white C" id="C4" data-hz="261.6" data-note="C4">C4</div>
+                                    <div class="boardKey white D" id="D4" data-hz="293.7" data-note="D4"></div>
+                                    <div class="boardKey white E" id="E4" data-hz="329.6" data-note="E4"></div>
+                                    <div class="boardKey white F" id="F4" data-hz="349.2" data-note="F4"></div>
+                                    <div class="boardKey white G" id="B4" data-hz="392" data-note="G4"></div>
+                                    <div class="boardKey white A" id="A4" data-hz="440" data-note="A4"></div>
+                                    <div class="boardKey white B" id="B4" data-hz="493.9" data-note="B4"></div>
+                                    <div class="boardKey black Db" id="Db4" data-hz="277.2" data-note="C#4" data-note="Db4"></div>
+                                    <div class="boardKey black Eb" id="Eb4" data-hz="311.1" data-note="D#4" data-note="Eb4"></div>
+                                    <div class="boardKey black Gb" id="Gb4" data-hz="370" data-note="F#4" data-note="Gb4"></div>
+                                    <div class="boardKey black Ab" id="Ab4" data-hz="415.3" data-note="G#4" data-note="Ab4"></div>
+                                    <div class="boardKey black Bb" id="Bb4" data-hz="466.2" data-note="A#4" data-note="Bb4"></div>
+                                </div>
+                                <div class="borad-octBox oct5">
+                                    <div class="boardKey white C" id="C5" data-hz="523.3" data-note="C5">C5</div>
+                                    <div class="boardKey white D" id="D5" data-hz="587.3" data-note="D5"></div>
+                                    <div class="boardKey white E" id="E5" data-hz="659.3" data-note="E5"></div>
+                                    <div class="boardKey white F" id="F5" data-hz="698.5" data-note="F5"></div>
+                                    <div class="boardKey white G" id="G5" data-hz="784.0" data-note="G5"></div>
+                                    <div class="boardKey white A" id="A5" data-hz="880.0" data-note="A5"></div>
+                                    <div class="boardKey white B" id="B5" data-hz="987.8" data-note="B5"></div>
+                                    <div class="boardKey black Db" id="Db5" data-hz="554.4" data-note="C#5" data-note="Db5"></div>
+                                    <div class="boardKey black Eb" id="Eb5" data-hz="622.3" data-note="D#5" data-note="Eb5"></div>
+                                    <div class="boardKey black Gb" id="Gb5" data-hz="740.0" data-note="F#5" data-note="Gb5"></div>
+                                    <div class="boardKey black Ab" id="Ab5" data-hz="830.6" data-note="G#5" data-note="Ab5"></div>
+                                    <div class="boardKey black Bb" id="Bb5" data-hz="932.3" data-note="A#5" data-note="Bb5"></div>
+                                </div>
+                                <div class="borad-octBox oct6">
+                                    <div class="boardKey white C" id="C6" data-hz="" data-note="C6">C6</div>
+                                    <div class="boardKey white D" id="D6" data-hz="" data-note="D6"></div>
+                                    <div class="boardKey white E" id="E6" data-hz="" data-note="E6"></div>
+                                    <div class="boardKey white F" id="F6" data-hz="" data-note="F6"></div>
+                                    <div class="boardKey white G" id="G6" data-hz="" data-note="G6"></div>
+                                    <div class="boardKey white A" id="A6" data-hz="" data-note="A6"></div>
+                                    <div class="boardKey white B" id="B6" data-hz="" data-note="B6"></div>
+                                    <div class="boardKey black Db" id="Db6" data-hz="" data-note="C#6" data-note="Db6"></div>
+                                    <div class="boardKey black Eb" id="Eb6" data-hz="" data-note="D#6" data-note="Eb6"></div>
+                                    <div class="boardKey black Gb" id="Gb6" data-hz="" data-note="F#6" data-note="Gb6"></div>
+                                    <div class="boardKey black Ab" id="Ab6" data-hz="" data-note="G#6" data-note="Ab6"></div>
+                                    <div class="boardKey black Bb" id="Bb6" data-hz="" data-note="A#6" data-note="Bb6"></div>
+                                </div>
+                                <div class="borad-octBox oct7">
+                                    <div class="boardKey white C" id="C7" data-hz="" data-note="C7">C7</div>
+                                    <div class="boardKey white D" id="D7" data-hz="" data-note="D7"></div>
+                                    <div class="boardKey white E" id="E7" data-hz="" data-note="E7"></div>
+                                    <div class="boardKey white F" id="F7" data-hz="" data-note="F7"></div>
+                                    <div class="boardKey white G" id="G7" data-hz="" data-note="G7"></div>
+                                    <div class="boardKey white A" id="A7" data-hz="" data-note="A7"></div>
+                                    <div class="boardKey white B" id="B7" data-hz="" data-note="B7"></div>
+                                    <div class="boardKey black Db" id="Db7" data-hz="" data-note="C#7" data-note="Db7"></div>
+                                    <div class="boardKey black Eb" id="Eb7" data-hz="" data-note="D#7" data-note="Eb7"></div>
+                                    <div class="boardKey black Gb" id="Gb7" data-hz="" data-note="F#7" data-note="Gb7"></div>
+                                    <div class="boardKey black Ab" id="Ab7" data-hz="" data-note="G#7" data-note="Ab7"></div>
+                                    <div class="boardKey black Bb" id="Bb7" data-hz="" data-note="A#7" data-note="Bb7"></div>
+                                </div>
+                                <div class="borad-octBox oct8">
+                                    <div class="boardKey white C" id="C8" data-hz="" data-note="C8">C8</div>
+                                    <div class="boardKey white D" id="D8" data-hz="" data-note="D8"></div>
+                                    <div class="boardKey white E" id="E8" data-hz="" data-note="E8"></div>
+                                    <div class="boardKey white F" id="F8" data-hz="" data-note="F8"></div>
+                                    <div class="boardKey white G" id="G8" data-hz="" data-note="G8"></div>
+                                    <div class="boardKey white A" id="A8" data-hz="" data-note="A9"></div>
+                                    <div class="boardKey white B" id="B8" data-hz="" data-note="B9"></div>
+                                    <div class="boardKey black Db" id="Db8" data-hz="" data-note="C#9" data-note="Db9"></div>
+                                    <div class="boardKey black Eb" id="Eb8" data-hz="" data-note="D#9" data-note="Eb9"></div>
+                                    <div class="boardKey black Gb" id="Gb8" data-hz="" data-note="F#9" data-note="Gb9"></div>
+                                    <div class="boardKey black Ab" id="Ab8" data-hz="" data-note="G#9" data-note="Ab9"></div>
+                                    <div class="boardKey black Bb" id="Bb8" data-hz="" data-note="A#9" data-note="Bb9"></div>
+                                </div>
+                                <div class="borad-octBox oct9">
+                                    <div class="boardKey white C" id="C9" data-hz="" data-note="C9">C9</div>
+                                    <div class="boardKey white D" id="D9" data-hz="" data-note="D9"></div>
+                                    <div class="boardKey white E" id="E9" data-hz="" data-note="E9"></div>
+                                    <div class="boardKey white F" id="F9" data-hz="" data-note="F9"></div>
+                                    <div class="boardKey white G" id="G9" data-hz="" data-note="G9"></div>
+                                    <div class="boardKey white A" id="A9" data-hz="" data-note="A9"></div>
+                                    <div class="boardKey white B" id="B9" data-hz="" data-note="B9"></div>
+                                    <div class="boardKey black Db" id="Db9" data-hz="" data-note="C#9" data-note="Db9"></div>
+                                    <div class="boardKey black Eb" id="Eb9" data-hz="" data-note="D#9" data-note="Eb9"></div>
+                                    <div class="boardKey black Gb" id="Gb9" data-hz="" data-note="F#9" data-note="Gb9"></div>
+                                    <div class="boardKey black Ab" id="Ab9" data-hz="" data-note="G#9" data-note="Ab9"></div>
+                                    <div class="boardKey black Bb" id="Bb9" data-hz="" data-note="A#9" data-note="Bb9"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="main4">
+        <div class="clearfix">
+            <div class="width-adjust-box">
+                <div class="width-adjust shorten"><i class="fa fa-2x fa-minus-circle"></i></div>
+                <div class="width-adjust extend"><i class="fa fa-2x fa-plus-circle">
+                    </i></div>
+                <div class="width-adjust size">8</div>
+            </div>
+            <div class="playBox">
+                <div class="playButton" id="back"><i class="fa fa-backward"></i></div>
+                <div class="playButton" id="push"><i class="fa fa-forward"></i></div>
+                <div class="playButton" id="push"><i class="fa fa-fast-backward "></i></div>
+                <div class="playButton" id="stop"><i class="fa fa-stop"></i></div>
+                <div class="playButton" id="start"><i class="fa fa-play"></i></div>
+                <div class="playButton" id="rec"><i class="fa fa-play-circle"></i></div>
+                <div class="setBox">
+                    <div class="set" id="time"></div>
+                    <div class="set" id="tempo"></div>
+                    <div class="set" id="metroNome"></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <!--    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>-->
+    <script type="text/javascript" src="js/scale.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+    <script type="text/javascript">
+        
+        var synth = new Tone.Synth().toMaster();
+        $('.boardKey').click(function () {
+            var note = $(this).data('note');
+            console.log(note);
+            synth.triggerAttackRelease(note, '8n');
+        });
+        
+        $('.rollKey').click(function () {
+            var note = $(this).data('note');
+            console.log(note);
+            synth.triggerAttackRelease(note, '8n');
+        });
+    </script>
+
+</html>

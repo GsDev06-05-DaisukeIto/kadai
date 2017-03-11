@@ -1,0 +1,1417 @@
+* {
+    box-sizing: border-box;
+}
+
+.containers {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+header {
+    background: white;
+}
+
+#header-left {
+    background: white;
+    float: left;
+}
+
+#logo {
+    background: royalblue;
+    line-height: 50px;
+    width: 100px;
+}
+
+#header-right {
+    background: white;
+    float: right;
+}
+
+.main {
+    background: skyblue;
+}
+
+#main-left {
+    background: limegreen;
+    float: left;
+    width: 20%;
+    height: 300px;
+}
+
+
+/*スライドパネル*/
+
+#title-panel {
+    background-color: lightsteelblue;
+    color: black;
+    border: 1px solid royalblue;
+    line-height: 60px;
+    text-align: center;
+    height: 60px;
+    width: 100%;
+    font-size: 18px;
+    border-radius: 3px;
+}
+
+.slide-panel {
+    background-color: white;
+    color: black;
+    border: 1px solid #999;
+    line-height: 30px;
+    /*    text-align: center;*/
+    height: 30px;
+    width: 100%;
+    font-size: 12px;
+    border-radius: 3px;
+    padding-left: 20px;
+}
+
+.slide-panel.active {
+    background-color: royalblue;
+    color: white;
+}
+
+.slide-panel:hover {
+    background-color: royalblue;
+    color: white;
+    cursor: pointer;
+}
+
+#main-center {
+    background: seagreen;
+    float: left;
+    width: 60%;
+    height: 300px;
+    /*
+    padding: 5px 5px;
+    border-radius: 5px;
+*/
+}
+
+#contents {
+    background: #221c1c;
+    color: white;
+    border: 4px solid lightgray;
+    width: 100%;
+    height: 300px;
+    margin: 0 auto;
+    border-radius: 7px;
+    position: relative
+}
+
+#contents-box {
+    text-align: center;
+    padding-top: 30px;
+}
+
+#contents-box >p {
+    font-size: 30px;
+    font-weight: bold
+}
+
+#inputKey-box {
+    background-color: #221c1c;
+    width: 100%;
+    position: absolute;
+    /*    left: 30px;*/
+    bottom: 10px
+    /*
+    height: 30px;
+    text-align: center;
+*/
+}
+
+.inputKey {
+    background-color: white;
+    color: black;
+    border: 1px solid #999;
+    display: inline-block;
+    line-height: 30px;
+    text-align: center;
+    height: 30px;
+    width: 50px;
+    font-size: 14px;
+    margin-right: 5px;
+}
+
+.inputKey:first-child {
+    margin-left: 30px;
+}
+
+.tool {
+    background-color: white;
+    border: 1px solid #999;
+    display: inline-block;
+    line-height: 30px;
+    text-align: center;
+    cursor: pointer;
+    height: 30px;
+    width: 60px;
+    margin-right: 5px;
+}
+
+#anserChk {
+    margin-left: 30px;
+    color: darkgray;
+    pointer-events: none;
+}
+
+#anserChk.active {
+    background-color: blue;
+    color: white;
+    border: 1px solid #999;
+    pointer-events: auto;
+}
+
+#keyClear {
+    color: black;
+}
+
+#main-right {
+    background: lightgreen;
+    float: left;
+    width: 20%;
+    height: 300px;
+}
+
+#info-box {
+    width: 100%;
+    height: 150px;
+    border: 1px solid #999;
+    border-radius: 5px;
+}
+
+.info.title {
+    background-color: lightsteelblue;
+    color: black;
+    border: 1px solid royalblue;
+    line-height: 50px;
+    text-align: center;
+    height: 50px;
+    width: 100%;
+    font-size: 18px;
+    border-radius: 3px;
+}
+
+.info.contents {
+    background-color: white;
+    color: black;
+    border: 1px solid #999;
+    line-height: 100px;
+    text-align: center;
+    height: 100px;
+    width: 100%;
+    font-size: 14px;
+    border-radius: 3px;
+}
+
+#hint-box {
+    width: 100%;
+    height: 150px;
+    border: 1px solid #999;
+    border-radius: 5px;
+}
+
+.hint.title {
+    background-color: lightsteelblue;
+    color: black;
+    border: 1px solid royalblue;
+    line-height: 50px;
+    text-align: center;
+    height: 50px;
+    width: 100%;
+    font-size: 18px;
+    border-radius: 3px;
+}
+
+#hint1 {
+    background-color: white;
+    color: black;
+    border: 1px solid #999;
+    line-height: 50px;
+    text-align: center;
+    height: 50px;
+    width: 100%;
+    font-size: 14px;
+    border-radius: 3px;
+}
+
+#hint2 {
+    background-color: white;
+    color: black;
+    border: 1px solid #999;
+    line-height: 50px;
+    text-align: center;
+    height: 50px;
+    width: 100%;
+    font-size: 14px;
+    border-radius: 3px;
+}
+
+.main2 {
+    background: skyblue;
+    height: 300px;
+    border: 4px solid dimgray;
+}
+
+#main2-left {
+    background: yellow;
+    float: left;
+    width: 20%;
+    height: 300px;
+}
+
+.piano-setting.title {
+    background-color: lightsteelblue;
+    width: 100%;
+    height: 60px;
+    border: 1px solid #999;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 60px;
+    font-size: 18px;
+}
+
+.piano-setting.keybordSelect {
+    background-color: aliceblue;
+    padding-top: 10px;
+    text-align: center;
+    width: 100%;
+    height: 80px;
+    border: 1px solid #999;
+    border-radius: 5px;
+}
+
+.piano-setting.tone {
+    background-color: aliceblue;
+    padding-top: 10px;
+    text-align: center;
+    width: 100%;
+    height: 80px;
+    border: 1px solid #999;
+    border-radius: 5px;
+}
+
+.dropdown.piano {
+    margin-top: 5px;
+}
+
+.piano-setting.width {
+    background-color: aliceblue;
+    padding-top: 10px;
+    text-align: center;
+    width: 100%;
+    height: 80px;
+    border: 1px solid #999;
+    border-radius: 5px;
+}
+
+#slider {
+    margin-top: 5px;
+}
+
+#main2-center {
+    background-color: white;
+    float: left;
+    width: 80%;
+    height: 300px;
+}
+
+.clearfix::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+
+/*スケール選択ボタン*/
+
+#piano-top {
+    background-color: aliceblue;
+    border: 1px solid #999;
+    width: 100%;
+    height: 80px;
+}
+
+#selectScale {
+    padding-top: 10px;
+    margin-left: 25px;
+    background-color: aliceblue;
+    width: 100%;
+    height: 60px;
+    position: relative;
+    /*    text-align: center;*/
+}
+
+.selectBut {
+    background-color: royalblue;
+    color: white;
+    /*    border: 1px solid #999;*/
+    margin-left: 3px;
+    display: inline-block;
+    line-height: 30px;
+    text-align: center;
+    cursor: pointer;
+    height: 30px;
+    width: 45px;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    border-radius: 20%;
+    box-shadow: 0px 4px midnightblue;
+}
+
+div.selectBut.on {
+    top: 4px;
+    line-height: 28px;
+    box-shadow: 0px 0px #000;
+    border: 1px solid midnightblue;
+    color: red;
+    background-color: blue;
+}
+
+
+/*ピアノロール*/
+
+#piano-box {
+    background-color: lightgrey;
+    width: 100%;
+    height: 220px;
+    overflow: scroll;
+    font-size: 0px;
+}
+
+#borad-container {
+    background-color: #c4f4d8;
+    width: 1680px;
+    height: 225px;
+    font-size: 0px;
+}
+
+.oct-container {
+    /*    margin: 0 auto;*/
+    background-color: antiquewhite;
+    border: 1px solid #999;
+    width: calc(100% / 4);
+    height: 220px;
+    font-size: 0px;
+    /*    display: inline-block;*/
+    float:left;
+    position: relative;
+    /*    overflow: hidden;*/
+}
+
+.borad-octBox {
+/*    margin: 0 auto;*/
+    background-color: antiquewhite;
+    border: 1px solid #999;
+    width: calc(100% / 4);
+    height: 220px;
+    font-size: 0px;
+/*    display: inline-block;*/
+    float:left;
+    position: relative;
+/*    overflow: hidden;*/
+}
+
+/*
+#oct4 {
+    float:left;
+}
+
+#oct5 {
+    float:left;
+}
+*/
+
+
+
+.white {
+    background-color: white;
+    color: black;
+    text-align: center;
+    border: 1px solid #999;
+    cursor: pointer;
+    display: inline-block;
+    height: 220px;
+    width: calc(100% / 7);
+    font-size: 15px;
+    float: left;
+/*    position: absolute;*/
+/*    top: -4px;*/
+    border-radius: 0% 0% 5% 5%;
+    box-shadow: 0px 4px #d6d6d6;
+}
+
+div.white.active {
+    top: 0px;
+    box-shadow: 0px 0px #000;
+    border: 1px solid midnightblue;
+}
+
+.black {
+    background-color: black;
+    color: white;
+    border: 1px solid #999;
+    cursor: pointer;
+    height: 140px;
+    width: calc(100% / 10);
+    border-radius: 0% 0% 8% 8%;
+    float: left;
+}
+
+
+/*
+.c {
+    position: absolute;
+    left: 0px;
+}
+
+.d {
+    position: absolute;
+    left: 60px;
+}
+
+.e {
+    position: absolute;
+    left: 120px;
+}
+
+.f {
+    position: absolute;
+    left: 180px;
+}
+
+.g {
+    position: absolute;
+    left: 240px;
+}
+
+.a {
+    position: absolute;
+    left: 300px;
+}
+
+.b {
+    position: absolute;
+    left: 360px;
+}
+*/
+
+.db {
+    position: absolute;
+    left: 8.4%;
+}
+
+.eb {
+    position: absolute;
+    left: 25%;
+}
+
+.gb {
+    position: absolute;
+    left: 51%;
+}
+
+.ab {
+    position: absolute;
+    left: 66.6%;
+}
+
+.bb {
+    position: absolute;
+    left: 82.5%;
+}
+
+footer {
+    clear: both;
+    background: slategray;
+}
+
+
+/*3段目（ピアノロール）*/
+
+.main3 {
+    background: skyblue;
+    height: 340px;
+    border: 1px solid dimgray;
+    position: absolute;
+    bottom: 0px;
+    display:none;
+}
+
+.main3-top {
+    background: #c3cfd4;
+    width: 100%;
+    height: 40px;
+}
+
+.main3-bottom {
+    width: 100%;
+    height: 300px;
+}
+
+.main3-left {
+    background: skyblue;
+    float: left;
+    width: 140px;
+    height: 300px;
+}
+
+.pianoRoll-tool-box {
+    width: 140px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pianoRoll-tool {
+    background-color: lightgrey;
+    width: 35px;
+    height: 35px;
+    border: 1px solid black;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 40px;
+    margin-left: 3px;
+}
+
+.pianoRoll-tool.active {
+    background-color: grey;
+}
+
+
+
+#main3-center {
+    background-color: lightsteelblue;
+/*
+    float: left;
+    width: 85%;
+*/
+    margin-left: 140px;
+    height: 300px;
+    overflow: scroll;
+}
+
+#pianoRoll-key {
+    background-color: #c3deb0;
+    float: left;
+    width: 80px;
+    height: 1760px;
+}
+
+#pianoRoll-box {
+    background-color: royalblue;
+    margin-left: 80px;
+    height: 1760px;
+    overflow: scroll;
+}
+
+#pianoRoll {
+    background-color: #f0dc6b;
+    width: 2048px;
+    height: 1760px;
+}
+
+.pianoRoll-bar {
+    width: calc(100% / 16);
+    height: 1760px;
+    float: left;
+    border: 1px solid black;
+}
+
+.roll-octBox {
+    width: 80px;
+    height: calc(100% / 11);
+    background-color: rgba(244, 177, 238, 0.87);
+    /*    border: 1px solid black;*/
+    position: relative;
+}
+
+.rollKey.white {
+    height: calc(100% / 7);
+    width: 80px;
+    background-color: white;
+    border: 1px solid black;
+    text-align: right;
+}
+
+.rollKey.white.pushd {
+    background-color: lightgrey;
+}
+
+.rollKey.black {
+    height: calc(100% / 12);
+    width: 55px;
+    background-color: black;
+    border: 1px solid black;
+    position: absolute;
+}
+
+.rollKey.black.pushd {
+    opacity: 0.7
+}
+
+.rollKey.black.Bb {
+    top: 8.5%;
+}
+
+.rollKey.black.Ab {
+    top: 25%;
+}
+
+.rollKey.black.Gb {
+    top: 40.5%;
+}
+
+.rollKey.black.Eb {
+    top: 66.6%;
+}
+
+.rollKey.black.Db {
+    top: 83.3%;
+}
+
+/*KeyBoardパネル*/
+
+.keyboard {
+    background: skyblue;
+    width: 100%;
+    height: 280px;
+    border: 1px solid dimgray;
+    position: absolute;
+    bottom: 0px;
+    display:none;
+}
+
+.keyboard-top {
+    background: #c3cfd4;
+    width: 100%;
+    height: 60px;
+}
+
+.keyboard-bottom {
+    width: 100%;
+    height: 220px;
+}
+
+.keyboard-left {
+    background: skyblue;
+    float: left;
+    width: 140px;
+    height: 220px;
+}
+
+.keyboard-tool-box {
+    width: 140px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.keyboard-tool {
+    background-color: lightgrey;
+    width: 35px;
+    height: 35px;
+    border: 1px solid black;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 40px;
+    margin-left: 3px;
+}
+
+.keyboard-tool.pushd {
+    background-color: grey;
+}
+
+#keyboard-center {
+    background-color: lightsteelblue;
+    margin-left: 140px;
+    height: 220px;
+}
+
+.keyboard-box {
+    background-color: #e1e653;
+    width:100%;
+    height: 220px;
+    overflow: scroll;
+    /*    border: 1px solid black;*/
+}
+
+#keyboard-container {
+    background-color: royalblue;
+    width: 4620px;
+    height: 220px;
+}
+
+/*
+#pianoRoll {
+    background-color: #f0dc6b;
+    width: 2048px;
+    height: 220px;
+}
+*/
+
+
+/*KeyBoard関連*/
+.borad-octBox {
+    width: calc(100% / 11);
+    height: 220px;
+    background-color: rgba(244, 177, 238, 0.87);
+    /*    border: 1px solid black;*/
+    float: left;
+    position: relative;
+}
+
+.boardKey.white {
+    width: calc(100% / 7);
+    height: 220px;
+    background-color: white;
+    border: 1px solid black;
+    float: left;
+    text-align:left;
+}
+
+.boardKey.white.pushd {
+    background-color: lightgrey;
+}
+
+.boardKey.black {
+    width: calc(100% / 12);
+    height: 120px;
+    background-color: black;
+    border: 1px solid black;
+    float: left;
+    position: absolute;
+}
+
+/*KeyBoard関連*/
+.boardKey.black.pushd {
+    opacity: 0.7
+}
+
+.boardKey.black.Db {
+    left: 8.5%;
+}
+
+.boardKey.black.Eb {
+    left: 25%;
+}
+
+.boardKey.black.Gb {
+    left: 40.5%;
+}
+
+.boardKey.black.Ab {
+    left: 66.6%;
+}
+
+.boardKey.black.Bb {
+    left: 83.3%;
+}
+
+/*再生ボタンなど*/
+
+.main4 {
+    background: #a2f047;
+    height: 50px;
+    border: 1px solid dimgray;
+}
+
+.playBox {
+    background: #8cecf4;
+    height: 50px;
+    width: 500px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.playButton {
+    background-color: gray;
+    color: black;
+    height: 30px;
+    width: 60px;
+    margin-right: 15px;
+    border-radius: 30%;
+    line-height: 30px;
+    text-align: center;
+}
+
+#rec {
+    color: orangered;
+}
+
+
+.setBox {
+    background: #24e5f5;
+    height: 50px;
+    width: 200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.playButton {
+    background-color: gray;
+    color: black;
+    height: 30px;
+    width: 60px;
+    margin-right: 15px;
+    border-radius: 40%;
+    line-height: 30px;
+    text-align: center;
+}
+
+
+/*トラック幅の調整ボタン*/
+.width-adjust-box {
+    width: 120px;
+    height: 50px;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.width-adjust {
+    background-color: lightgrey;
+    width: 35px;
+    height: 35px;
+    border: 1px solid black;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 40px;
+    margin-left: 3px;
+}
+
+.width-adjust.pushd {
+    background-color: grey;
+}
+
+.width-adjust.disabled {
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+
+/* DAW*/
+
+.daw-main {
+    background: #f3dcf7;
+    width: 100%;
+    height: 500px;
+    position: relative;
+    border: 1px solid black;
+}
+
+.daw-left {
+    background: #c59df4;
+    width: 220px;
+    height: 500px;
+    float: left;
+/*    border: 1px solid black;*/
+}
+
+.daw-center {
+    background: #9de3f4;
+    height: 500px;
+    margin-left: 220px;
+/*    border: 1px solid black;*/
+}
+
+
+/*トラック左側（各種設定）*/
+.add-box {
+    width: 220px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+/*    border: 1px solid black;*/
+}
+
+.addButton {
+    background-color:white;
+    color: black;
+    border: 1px solid black;
+    height: 20px;
+    width: 60px;
+    margin-right: 5px;
+    border-radius: 5px;
+    line-height: 20px;
+    text-align: center;
+    font-size: 12px;
+}
+
+.addButton.active {
+    background-color: gray;
+}
+
+.track-set-box {
+    background-color:#6bd0f5;
+    width: 220px;
+    height: 460px;
+/*    border: 1px solid black;*/
+}
+
+.ui-state-defaults {
+    background-color: beige;
+    width:220px;
+    height: 60px;
+    border: 1px solid black;
+    position: relative;
+}
+
+
+/*
+.ui-state-default > div > div{
+    position: relative;
+}
+*/
+
+
+.track-set-top {
+    width: 220px;
+    height: 20px;
+/*    border: 1px solid black;*/
+}
+
+.track-set-top > div{
+    position: relative;
+}
+
+.track-set-name {
+    width: 180px;
+    height: 20px;
+/*    border: 1px solid black;*/
+    float: left;
+}
+
+.track-set-nameSpase {
+    width: 176px;
+    height: 16px;
+/*    border: 1px solid black;*/
+    margin: 2px 2px;
+    border-radius: 5px;
+    line-height: 16px;
+    text-align: left;
+    font-size: 12px
+}
+
+.track-set-other {
+    width: 40px;
+    height: 20px;
+/*    border: 1px solid black;*/
+    float: left;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.track-set-main {
+    width: 220px;
+    height: 40px;
+    position: relative;
+}
+
+.track-set-main > div{
+    position: relative;
+}
+
+/*
+.track-set-main > div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+*/
+
+
+.track-set-type {
+    width: 40px;
+    height: 40px;
+/*    border: 1px solid black;*/
+    float: left;
+}
+
+.track-set-type img{
+    width: 38px;
+    height: 38px
+}
+
+.track-set-button {
+    width: 65px;
+    height: 40px;
+/*    border: 1px solid black;*/
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.track-set-buttons {
+    width: 18px;
+    height: 18px;
+    border: 1px solid black;
+    border-radius: 3px;
+    vertical-align: middle;
+    text-align: center;
+/*    font-weight: bold;*/
+}
+
+#recTrack {
+    color: red
+}
+
+.track-set-volume {
+    width:  75px;
+    height: 40px;
+/*    border: 1px solid black;*/
+    float: left;
+    position: relative;
+}
+
+.track-set-volume > .slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.track-set-pan {
+    width: 40px;
+    height: 40px;
+/*    border: 1px solid black;*/
+    float: left;
+}
+
+.track-set-pan img{
+    width: 38px;
+    height: 38px
+}
+
+
+.track-set-option-box {
+    list-style: none;
+    position: absolute;
+    top:0px;
+    right: -70px;
+    display: none;
+}
+
+.track-set-option {
+    background-color: white;
+    width:100px;
+    height: 20px;
+    line-height: 20px;
+    border: 1px solid gray;
+}
+
+.track-set-option.active {
+    background-color: gray;
+}
+
+
+/*トラック本体*/
+.track-main-box {
+    background-color: royalblue;
+    width:100%;
+    height: 500px;
+    overflow: scroll;
+/*    border: 1px solid black;*/
+}
+
+.track-main-container {
+    background-color: #c3deb0;
+    width: 2048px;
+    height: 500px;
+}
+
+.track-main-top {
+    background-color: #ace681;
+    height: 40px;
+}
+
+.track-bar-box {
+    background-color: #bfccb5;
+    height: 20px;
+}
+
+.track-bar-box .bars {
+    width: calc(100% / 16);
+    height: 20px;
+    border: 1px solid black;
+    float: left;
+}
+
+.track-locater-box {
+    background-color: #bfccb5;
+    height: 20px;
+    border: 1px solid black;
+}
+
+.track-main {
+    background-color: #e18b41;
+    height: 460px;
+/*    border: 1px solid black;*/
+}
+
+.track{
+    width:100%px;
+    height: 60px;
+    border: 1px solid black;
+}
+
+
+/*トラック追加パネル（ページ上部からスライド）*/
+.addTrackPanel{
+    width:482px;
+    height: 300px;
+    border: 1px solid black;
+}
+
+.addTrackPanel-img-box {
+    width:120px;
+    height: 100px;
+    float: left;
+    border: 1px solid black;
+}
+
+.addTrackPanel-txt-box {
+    width:120px;
+    height: 20px;
+    float: left;
+    line-height: 20px;
+    text-align: center;
+    border: 1px solid black;
+}
+
+.addTrackPanel-txt-box {
+    width:120px;
+    height: 20px;
+    float: left;
+    line-height: 20px;
+    text-align: center;
+    border: 1px solid black;
+}
+
+.addTrackPanel-set-spase {
+    width:480x;
+    height: 20px;
+}
+
+.addTrackPanel-set-box {
+    width:480x;
+    height: 40px;
+    line-height: 40px;
+    vertical-align:middle;
+    border: 1px solid black;
+}
+
+.addTrackPanel-set-box span {
+    margin-left: 20px;
+}
+
+.addTrackPanel-set-box input {
+    height: 25px;
+}
+
+
+.addTrackPanel-set-button {
+    background-color: royalblue;
+    color: white;
+    width:80px;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    margin-left: 50px;
+    border-radius: 5px;
+    display: inline-block
+}
+
+
+/*ピアノロールパネル（ページ下部からスライド）*/
+
+.pianoRoll-panel {
+    background-color: royalblue;
+    width: 100%;
+    height: 200px;
+    position: absolute;
+    bottom: 0px;
+    display:none;
+}
+
+
+
+
+
+/*モーダル*/
+
+
+/*ヒント*/
+
+.hint {
+    background-color: white;
+    color: black;
+    border: 1px solid #999;
+    line-height: 40px;
+    text-align: center;
+    cursor: pointer;
+    height: 40px;
+    width: 200px;
+}
+
+.hint-modal-wrapper {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 100;
+    display: none;
+}
+
+.hint-modal {
+    position: absolute;
+    top: 20%;
+    left: 34%;
+    background-color: #e6ecf0;
+    padding: 20px 0 40px;
+    border-radius: 10px;
+    width: 450px;
+    height: auto;
+    text-align: center;
+}
+
+.fa-times {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    color: rgba(128, 128, 128, 0.46);
+    cursor: pointer;
+}
+
+
+/*レッスン*/
+
+
+/*
+#lesson {
+    background-color: white;
+    color: black;
+    border: 1px solid #999;
+    line-height: 40px;
+    text-align: center;
+    cursor: pointer;
+    height: 40px;
+    width: 200px;
+}
+*/
+
+.lesson-modal-wrapper {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 100;
+    display: none;
+}
+
+.lesson-modal {
+    position: relative;
+    margin: 15px auto;
+    width: 90%;
+    height: 90%;
+    border: 1px solid #999;
+    overflow: hidden;
+}
+
+.lesson-contents-wrapper {
+    position: absolute;
+    top: 0px;
+    height: 100%;
+}
+
+.lesson-contents {
+    background-color: #e6ecf0;
+    display: none;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    border: 1px solid #999;
+}
+
+.lesson-contents.active {
+    display: block;
+}
+
+.lesson-contents >h1 {
+    font-size: 54px;
+    font-weight: bold
+}
+
+.lesson-contents > p {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+
+/*
+.lesson-li {
+    background-color: #e6ecf0;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    border: 1px solid #999;
+}
+*/
+
+.change-button {
+    background-color: royalblue;
+    color: black;
+    /*    border: 1px solid #999;*/
+    border-radius: 5px;
+    line-height: 30px;
+    text-align: center;
+    cursor: pointer;
+    height: 30px;
+    width: 60px;
+}
+
+.change-button.disabled {
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+.change-button.next {
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+}
+
+.change-button.prev {
+    position: absolute;
+    bottom: 12px;
+    left: 12px;
+}
+
+
+
+
+
+
+
+

@@ -1,0 +1,903 @@
+* {
+    box-sizing: border-box;
+}
+
+.containers {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+header {
+    background: white;
+}
+
+#header-left {
+    background: white;
+    float: left;
+}
+
+#logo {
+    background: royalblue;
+    line-height: 50px;
+    width: 100px;
+}
+
+#header-right {
+    background: white;
+    float: right;
+}
+
+.main {
+    background: skyblue;
+}
+
+#main-left {
+    background: limegreen;
+    float: left;
+    width: 20%;
+    height: 300px;
+}
+
+
+/*スライドパネル*/
+
+#title-panel {
+    background-color: lightsteelblue;
+    color: black;
+    border: 1px solid royalblue;
+    line-height: 60px;
+    text-align: center;
+    height: 60px;
+    width: 100%;
+    font-size: 18px;
+    border-radius: 3px;
+}
+
+.slide-panel {
+    background-color: white;
+    color: black;
+    border: 1px solid #999;
+    line-height: 30px;
+    /*    text-align: center;*/
+    height: 30px;
+    width: 100%;
+    font-size: 12px;
+    border-radius: 3px;
+    padding-left: 20px;
+}
+
+.slide-panel.active {
+    background-color: royalblue;
+    color: white;
+}
+
+.slide-panel:hover {
+    background-color: royalblue;
+    color: white;
+    cursor: pointer;
+}
+
+#main-center {
+    background: seagreen;
+    float: left;
+    width: 60%;
+    height: 300px;
+    /*
+    padding: 5px 5px;
+    border-radius: 5px;
+*/
+}
+
+#contents {
+    background: #221c1c;
+    color: white;
+    border: 4px solid lightgray;
+    width: 100%;
+    height: 300px;
+    margin: 0 auto;
+    border-radius: 7px;
+    position: relative
+}
+
+#contents-box {
+    text-align: center;
+    padding-top: 30px;
+}
+
+#contents-box >p {
+    font-size: 30px;
+    font-weight: bold
+}
+
+#inputKey-box {
+    background-color: #221c1c;
+    width: 100%;
+    position: absolute;
+    /*    left: 30px;*/
+    bottom: 10px
+    /*
+    height: 30px;
+    text-align: center;
+*/
+}
+
+.inputKey {
+    background-color: white;
+    color: black;
+    border: 1px solid #999;
+    display: inline-block;
+    line-height: 30px;
+    text-align: center;
+    height: 30px;
+    width: 50px;
+    font-size: 14px;
+    margin-right: 5px;
+}
+
+.inputKey:first-child {
+    margin-left: 30px;
+}
+
+.tool {
+    background-color: white;
+    border: 1px solid #999;
+    display: inline-block;
+    line-height: 30px;
+    text-align: center;
+    cursor: pointer;
+    height: 30px;
+    width: 60px;
+    margin-right: 5px;
+}
+
+#anserChk {
+    margin-left: 30px;
+    color: darkgray;
+    pointer-events: none;
+}
+
+#anserChk.active {
+    background-color: blue;
+    color: white;
+    border: 1px solid #999;
+    pointer-events: auto;
+}
+
+#main-right {
+    background: lightgreen;
+    float: left;
+    width: 20%;
+    height: 300px;
+}
+
+#info-box {
+    width: 100%;
+    height: 150px;
+    border: 1px solid #999;
+    border-radius: 5px;
+}
+
+.info.title {
+    background-color: lightsteelblue;
+    color: black;
+    border: 1px solid royalblue;
+    line-height: 50px;
+    text-align: center;
+    height: 50px;
+    width: 100%;
+    font-size: 18px;
+    border-radius: 3px;
+}
+
+.info.contents {
+    background-color: white;
+    color: black;
+    border: 1px solid #999;
+    line-height: 100px;
+    text-align: center;
+    height: 100px;
+    width: 100%;
+    font-size: 14px;
+    border-radius: 3px;
+}
+
+#hint-box {
+    width: 100%;
+    height: 150px;
+    border: 1px solid #999;
+    border-radius: 5px;
+}
+
+.hint.title {
+    background-color: lightsteelblue;
+    color: black;
+    border: 1px solid royalblue;
+    line-height: 50px;
+    text-align: center;
+    height: 50px;
+    width: 100%;
+    font-size: 18px;
+    border-radius: 3px;
+}
+
+#hint1 {
+    background-color: white;
+    color: black;
+    border: 1px solid #999;
+    line-height: 50px;
+    text-align: center;
+    height: 50px;
+    width: 100%;
+    font-size: 14px;
+    border-radius: 3px;
+}
+
+#hint2 {
+    background-color: white;
+    color: black;
+    border: 1px solid #999;
+    line-height: 50px;
+    text-align: center;
+    height: 50px;
+    width: 100%;
+    font-size: 14px;
+    border-radius: 3px;
+}
+
+.main2 {
+    background: skyblue;
+    height: 300px;
+    border: 4px solid dimgray;
+}
+
+#main2-left {
+    background: yellow;
+    float: left;
+    width: 20%;
+    height: 300px;
+}
+
+.piano-setting.title {
+    background-color: lightsteelblue;
+    width: 100%;
+    height: 60px;
+    border: 1px solid #999;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 60px;
+    font-size: 18px;
+}
+
+.piano-setting.keybordSelect {
+    background-color: aliceblue;
+    padding-top: 10px;
+    text-align: center;
+    width: 100%;
+    height: 80px;
+    border: 1px solid #999;
+    border-radius: 5px;
+}
+
+.piano-setting.tone {
+    background-color: aliceblue;
+    padding-top: 10px;
+    text-align: center;
+    width: 100%;
+    height: 80px;
+    border: 1px solid #999;
+    border-radius: 5px;
+}
+
+.dropdown.piano {
+    margin-top: 5px;
+}
+
+.piano-setting.width {
+    background-color: aliceblue;
+    padding-top: 10px;
+    text-align: center;
+    width: 100%;
+    height: 80px;
+    border: 1px solid #999;
+    border-radius: 5px;
+}
+
+#slider {
+    margin-top: 5px;
+}
+
+#main2-center {
+    background-color: white;
+    float: left;
+    width: 80%;
+    height: 300px;
+}
+
+.clearfix::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+
+/*スケール選択ボタン*/
+
+#piano-top {
+    background-color: aliceblue;
+    border: 1px solid #999;
+    width: 100%;
+    height: 80px;
+}
+
+#selectScale {
+    padding-top: 10px;
+    margin-left: 25px;
+    background-color: aliceblue;
+    width: 100%;
+    height: 60px;
+    position: relative;
+    /*    text-align: center;*/
+}
+
+.selectBut {
+    background-color: royalblue;
+    color: white;
+    /*    border: 1px solid #999;*/
+    margin-left: 3px;
+    display: inline-block;
+    line-height: 30px;
+    text-align: center;
+    cursor: pointer;
+    height: 30px;
+    width: 45px;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    border-radius: 20%;
+    box-shadow: 0px 4px midnightblue;
+}
+
+div.selectBut.on {
+    top: 4px;
+    line-height: 28px;
+    box-shadow: 0px 0px #000;
+    border: 1px solid midnightblue;
+    color: red;
+    background-color: blue;
+}
+
+
+/*ピアノロール*/
+
+#piano-box {
+    background-color: lightgrey;
+    width: 100%;
+    height: 220px;
+    overflow: scroll;
+    font-size: 0px;
+}
+
+#borad-container {
+    background-color: #c4f4d8;
+    width: 1680px;
+    height: 600px;
+    font-size: 0px;
+}
+
+.borad-octBox {
+    margin: 0 auto;
+    background-color: antiquewhite;
+    border: 1px solid #999;
+    width: calc(100% / 4);
+    height: 220px;
+    font-size: 0px;
+/*    display: inline-block;*/
+    float:left;
+    position: relative;
+/*    overflow: hidden;*/
+}
+
+#oct4 {
+    float:left;
+}
+
+#oct5 {
+    float:left;
+}
+
+
+
+.white {
+    background-color: white;
+    color: black;
+    text-align: center;
+    border: 1px solid #999;
+    cursor: pointer;
+    display: inline-block;
+    height: 220px;
+    width: calc(100% / 7);
+    font-size: 15px;
+    float: left;
+/*    position: absolute;*/
+/*    top: -4px;*/
+    border-radius: 0% 0% 5% 5%;
+    box-shadow: 0px 4px #d6d6d6;
+}
+
+div.white.active {
+    top: 0px;
+    box-shadow: 0px 0px #000;
+    border: 1px solid midnightblue;
+}
+
+.black {
+    background-color: black;
+    color: white;
+    border: 1px solid #999;
+    cursor: pointer;
+    height: 140px;
+    width: calc(100% / 10);
+    border-radius: 0% 0% 8% 8%;
+    float: left;
+}
+
+
+/*
+.c {
+    position: absolute;
+    left: 0px;
+}
+
+.d {
+    position: absolute;
+    left: 60px;
+}
+
+.e {
+    position: absolute;
+    left: 120px;
+}
+
+.f {
+    position: absolute;
+    left: 180px;
+}
+
+.g {
+    position: absolute;
+    left: 240px;
+}
+
+.a {
+    position: absolute;
+    left: 300px;
+}
+
+.b {
+    position: absolute;
+    left: 360px;
+}
+*/
+
+.db {
+    position: absolute;
+    left: 35px;
+}
+
+.eb {
+    position: absolute;
+    left: 105px;
+}
+
+.gb {
+    position: absolute;
+    left: 210px;
+}
+
+.ab {
+    position: absolute;
+    left: 280px;
+}
+
+.bb {
+    position: absolute;
+    left: 350px;
+}
+
+footer {
+    clear: both;
+    background: slategray;
+}
+
+
+/*3段目*/
+
+.main3 {
+    background: skyblue;
+    height: 300px;
+    border: 1px solid dimgray;
+}
+
+#main3-left {
+    background: skyblue;
+    float: left;
+    width: 15%;
+    height: 300px;
+}
+
+#main3-center {
+    background-color: lightsteelblue;
+    float: left;
+    width: 85%;
+    height: 300px;
+    overflow: scroll;
+}
+
+#pianoRoll-key {
+    background-color: #c3deb0;
+    float: left;
+    width: 80px;
+    height: 600px;
+}
+
+#pianoRoll-box {
+    background-color: royalblue;
+    margin-left: 80px;
+    height: 600px;
+    overflow: scroll;
+}
+
+#pianoRoll {
+    background-color: #f0dc6b;
+    width: 2000px;
+    height: 200px;
+}
+
+.oct-box {
+    width: 80px;
+    height: calc(100% / 4);
+    background-color: rgba(244, 177, 238, 0.87);
+    /*    border: 1px solid black;*/
+    position: relative;
+}
+
+.oct-box .whiteKey {
+    height: calc(100% / 7);
+    width: 80px;
+    background-color: white;
+    border: 1px solid black;
+    text-align: right;
+}
+
+.oct-box .blackKey {
+    height: calc(100% / 12);
+    width: 55px;
+    background-color: black;
+    border: 1px solid black;
+    position: absolute;
+}
+
+.blackKey.b1 {
+    top: 8.5%;
+}
+
+.blackKey.b2 {
+    top: 25%;
+}
+
+.blackKey.b3 {
+    top: 40.5%;
+}
+
+.blackKey.b4 {
+    top: 66.6%;
+}
+
+.blackKey.b5 {
+    top: 83.3%;
+}
+
+.main4 {
+    background: #a2f047;
+    height: 50px;
+    border: 1px solid dimgray;
+}
+
+.playBox {
+    background: #8cecf4;
+    height: 50px;
+    width: 500px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.playButton {
+    background-color: gray;
+    color: black;
+    height: 30px;
+    width: 60px;
+    margin-right: 15px;
+    border-radius: 30%;
+    line-height: 30px;
+    text-align: center;
+}
+
+#rec {
+    color: orangered;
+    font-size: 27px;
+}
+
+#stop {
+    font-size: 20px;
+}
+
+.setBox {
+    background: #24e5f5;
+    height: 50px;
+    width: 200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.playButton {
+    background-color: gray;
+    color: black;
+    height: 30px;
+    width: 60px;
+    margin-right: 15px;
+    border-radius: 30%;
+    line-height: 30px;
+    text-align: center;
+}
+
+
+/*sortTest*/
+
+.sortStet_top {
+        background: #e07bf2;
+        height: 50px;
+}
+
+.sortStet_main {
+    background: #f2f27b;
+    height: 300px;
+    overflow: scroll;
+}
+
+#addtrack-box {
+    background: #24e5f5;
+    height: 50px;
+    width: 200px;
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.addTrackButton {
+    background-color: gray;
+    color: black;
+    height: 30px;
+    width: 100px;
+    margin-right: 15px;
+    border-radius: 30%;
+    line-height: 30px;
+    text-align: center;
+}
+
+#track-box {
+    background-color: gainsboro;
+    height: 600px;
+}
+
+#track-set-box {
+    background-color: #c3deb0;
+    float: left;
+    width: 200px;
+    height: 600px;
+}
+
+#track-main-box {
+    background-color: royalblue;
+    margin-left: 200px;
+    height: 600px;
+    overflow: scroll;
+}
+
+#track-main {
+    background-color: #e18b41;
+    width: 2000px;
+    height: 580px;
+}
+
+#track-ul {
+    list-style:none;
+    margin-left:0px;
+}
+
+.track{
+    width:100%px;
+    height: 30px;
+    border: 1px solid black;
+}
+
+ul {
+    list-style:none;
+}
+
+.ui-state-default{
+    margin-left: 0px;
+    width:140px;
+    height: 30px;
+    border: 1px solid black;
+    position: relative;
+}
+
+.btn-group {
+    position: absolute;
+    top:0px;
+    right: 0px;
+}
+.dropdown-toggle.track {
+    height: 10px;
+    font-size:3px;
+    line-height: 10px
+}
+
+/*モーダル*/
+
+
+/*ヒント*/
+
+.hint {
+    background-color: white;
+    color: black;
+    border: 1px solid #999;
+    line-height: 40px;
+    text-align: center;
+    cursor: pointer;
+    height: 40px;
+    width: 200px;
+}
+
+.hint-modal-wrapper {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 100;
+    display: none;
+}
+
+.hint-modal {
+    position: absolute;
+    top: 20%;
+    left: 34%;
+    background-color: #e6ecf0;
+    padding: 20px 0 40px;
+    border-radius: 10px;
+    width: 450px;
+    height: auto;
+    text-align: center;
+}
+
+.fa-times {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    color: rgba(128, 128, 128, 0.46);
+    cursor: pointer;
+}
+
+
+/*レッスン*/
+
+
+/*
+#lesson {
+    background-color: white;
+    color: black;
+    border: 1px solid #999;
+    line-height: 40px;
+    text-align: center;
+    cursor: pointer;
+    height: 40px;
+    width: 200px;
+}
+*/
+
+.lesson-modal-wrapper {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 100;
+    display: none;
+}
+
+.lesson-modal {
+    position: relative;
+    margin: 15px auto;
+    width: 90%;
+    height: 90%;
+    border: 1px solid #999;
+    overflow: hidden;
+}
+
+.lesson-contents-wrapper {
+    position: absolute;
+    top: 0px;
+    height: 100%;
+}
+
+.lesson-contents {
+    background-color: #e6ecf0;
+    display: none;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    border: 1px solid #999;
+}
+
+.lesson-contents.active {
+    display: block;
+}
+
+.lesson-contents >h1 {
+    font-size: 54px;
+    font-weight: bold
+}
+
+.lesson-contents > p {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+
+/*
+.lesson-li {
+    background-color: #e6ecf0;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    border: 1px solid #999;
+}
+*/
+
+.change-button {
+    background-color: royalblue;
+    color: black;
+    /*    border: 1px solid #999;*/
+    border-radius: 5px;
+    line-height: 30px;
+    text-align: center;
+    cursor: pointer;
+    height: 30px;
+    width: 60px;
+}
+
+.change-button.disabled {
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+.change-button.next {
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+}
+
+.change-button.prev {
+    position: absolute;
+    bottom: 12px;
+    left: 12px;
+}
